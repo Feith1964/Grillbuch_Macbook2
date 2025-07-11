@@ -1,0 +1,116 @@
+%%Vorlage "Buch", v1.05
+%kompiliert mit LuaLaTeX
+%Grillbuch
+%\documentclass[paper=a5, twoside, div=calc, pagesize, ngerman]{scrbook}%DIV=13
+\documentclass[pdftext, bcor=7mm, ngerman]{scrbook}
+\usepackage{babel}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX,Numbers=OldStyle]{Linux Libertine O} 
+%\setsansfont[Ligatures=TeX]{Linux Biolinum O}
+%\setmonofont[Ligatures=TeX,Scale=0.7]{Source Code Pro}
+%\usepackage[babel,german=guillemets]{csquotes}
+%\usepackage[paperwidth=16.7cm,paperheight=15cm,left=1.5cm,right=1.5cm,top=0.5cm,bottom=0.5cm]{geometry}
+\usepackage{typearea}
+\setlength{\paperwidth}{165mm}
+\setlength{\paperheight}{199mm}
+\areaset{135mm}{159mm}
+\usepackage{blindtext}
+\usepackage{chapterthumb}
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\AddLayersToPageStyle{@everystyle@}{chapterthumb}
+\addtokomafont{chapterthumb}{\bfseries}
+%\usepackage[Glenn]{fncychap}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{floatflt}
+%\usepackage{marvosym}
+%\usepackage{xcookybooky}
+%\usepackage{cookingsymbols}
+%\ChTitleVar{\Large\rmfamily}
+%\ChNameVar{\Large\sffamily}
+\usepackage{lettrine,ellipsis,microtype,selnolig}
+\usepackage[colorlinks=false,pdfborder={0 0 0},unicode,bookmarksnumbered]{hyperref}
+\usepackage{enumitem}
+\usepackage{varioref}
+\usepackage{cleveref}
+\usepackage{multicol}
+%\usepackage[landscape]{geometry}
+%\includeonly{Kapitel_2}
+%\usepackage[color=blue,a3,frame,center]{crop}
+
+
+\begin{document}
+
+
+%{\addfontfeatures{Ligatures={Common,Rare}}
+
+\hypersetup{
+	pdftitle={Zuhause kann jeder},
+	pdfauthor={Uwe Feith},
+	pdfsubject={Kochen mit kurzen Hosen}
+	}
+
+
+\begin{titlepage}
+	\subject{Kochen mit kurzen Hosen}
+	\title{\Huge \textsc{Einführung in die Outdoor-Küche}}
+	\subtitle{Genießen im Freien}
+	\author{Uwe Feith}
+	\date{Januar 2025}
+\end{titlepage}
+\dedication{Für meine Familie und lieben Freunde, \\
+die mutig und selbstlos die neusten Kreationen\\
+kosten, ohne sich um etwaige Nebenwirkungen zu scheren.}
+
+\maketitle
+
+
+
+\frontmatter
+
+%\section*{Danksagung}
+
+%Für meine Familie und meine lieben Freunde, \\
+%die mutig und selbstlos meine neusten Kreationen\\
+%kosten, ohne sich um evtl. Nebenwirkungen zu scheren.
+
+
+\chapter{Vorwort}
+\lettrine[lines=3]{W}{illkommen zu einem Fest der Sinne,} einem kulinarischen Abenteuer, das am offenen Feuer beginnt und in 
+unvergesslichen Geschmackserlebnissen endet! Dieses Grillkochbuch ist mehr als nur eine Sammlung von Rezepten – es ist eine 
+Hommage an die Kunst des Grillens, die Gemeinschaft am Tisch und die Freude an frisch zubereiteten Speisen unter freiem Himmel.
+
+Grillen ist mehr als das Brutzeln von Fleisch über glühenden Kohlen. Es ist ein Ritual, das Menschen zusammenbringt, Geschichten 
+erzählt und Erinnerungen schafft. Es vereint Tradition und Kreativität, und es gibt kaum eine Zubereitungsart, die so viel Freiheit und 
+Experimentierfreude zulässt. Ob du ein erfahrener Grillmeister bist oder gerade erst die Zange in die Hand nimmst, dieses Buch soll dich 
+inspirieren und begeistern.
+
+Hier findest du Rezepte für jeden Geschmack – von saftigen Steaks und marinierten Hähnchenspießen über vegetarische Grillideen bis 
+hin zu überraschenden Desserts vom Rost. Begleitet von Tipps zur Auswahl der richtigen Zutaten, Grilltechniken und spannenden 
+Würzmischungen, laden wir dich ein, neue Aromen zu entdecken und deinen Grillhorizont zu erweitern.
+
+Feuer und Flamme für gutes Essen – das ist unser Motto! Lass uns gemeinsam den Grill anheizen, die Welt der Aromen erkunden und die 
+Magie des Grillens erleben.
+
+Guten Appetit und viel Spaß am Rost!
+\newline
+\textbf{Euer Uwe}
+
+\tableofcontents
+
+\mainmatter
+\include{Kapitel_1}%Grills, Smoker
+\include{Kapitel_2}%Tierisch Gut
+\include{Kapitel_3}%Gemüse
+\include{Kapitel_4}%Beilagen
+\include{Kapitel_5}% Salate
+\include{Kapitel_6}%Gewürze, Saucen und Dips
+%\include{Kapitel_7}%Dutch oven
+%\include{Kapitel_8}%Holzbackofen
+\include{Kapitel_7}%Desserts
+\include{Kapitel_8}%Fleischcuts
+\include{Kapitel_9}%Helferlein 
+ 
+
+\end{document}
